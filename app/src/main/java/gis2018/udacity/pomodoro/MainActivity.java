@@ -476,7 +476,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification_icon)
                 .setContentTitle("Pomodoro Countdown Timer")
-                .setContentIntent(pendingIntent)
+                .setContentIntent(pendingIntent).setColor(getResources().getColor(R.color.colorPrimary)).addAction(R.drawable.play, "Start Short/Long Break", pendingIntent) // added Start Short/Long Break button
                 .setContentText(notificationContentText)
                 .setAutoCancel(true);
     }
